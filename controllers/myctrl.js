@@ -1,4 +1,4 @@
-app.controller('myCtrl', function($scope) {
+app.controller('myCtrl', function($scope,$filter) {
 	$scope.mydata = { 
 		arr: [
 		{
@@ -22,4 +22,6 @@ app.controller('myCtrl', function($scope) {
 			age:32
 		}
 	]}
+	// Filters in controllers
+	console.log($filter('uppercase')('make this string uppercase!'))
 })

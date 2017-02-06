@@ -13,7 +13,8 @@
 	<body ng-app="myApp">
 		<div ng-controller="myCtrl">
 			<input ng-model="myfilter.name">
-			<div ng-repeat="users in mydata.arr | filter:myfilter">
+			<!--Chaining filters-->
+			<div ng-repeat="users in mydata.arr | filter:myfilter | orderBy: 'age' | limitTo:2">
 			<!--filter users and objects-->
 			{{ users }}
 			</div>
